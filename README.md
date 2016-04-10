@@ -1,3 +1,5 @@
+![Sentpletion logo](sentpletion.png)
+
 # Sentpletion
 Sentpletion is a desktop application for Windows, Mac, and Linux operating systems that helps to organize and facilitate sentence completion exercises. Sentence completion is a technique used in clinical psychology to promote personal growth by learning our individual patterns of cognition. You start with a pre-define sentence stem and complete it quickly. The goal is to complete a sentence with little thought in order to understand your underlying 'scripts' or assumptions that you subconsciously believe. Even when you are entirely stumped, the point of sentence completion is to keep writing. You then reflect on your sentences to understand yourself. See [Nathaniel Branden's webpage](http://www.nathanielbranden.com/sentence-completion-i) for more on sentence completion.
 
