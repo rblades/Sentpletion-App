@@ -1,7 +1,12 @@
-# Sentence Completion App
+# Sentpletion
 Sentpletion is a desktop application for Windows, Mac, and Linux operating systems that helps to organize and facilitate sentence completion exercises. Sentence completion is a technique used in clinical psychology to promote personal growth by learning our inidividual patterns of cognition. You start with a pre-define sentence stem and complete it quickly. The goal is to complete a sentence with little thought in order to understand your underlying 'scripts' or assumptions that you subconsciously believe. You then reflect on your sentences to understand yourself. See [Nathaniel Branden's webpage](http://www.nathanielbranden.com/sentence-completion-i) for more on sentence completion.
 
+### Example
 Each week you have the same 5-6 sentence stems. In under 10 minutes you must add 6-10 completions for each stem. Then you file these sentences away because you are not supposed to read any sentences from that week. Only at the end of each week can you pull up the sentences and re-read them in reflection for personal growth.
+
+| Stem | Completion |
+| -- | -- |
+| *If I listen more to what people tell me today...* | I will understand that others want to help me grow. |
 
 ## The Problem
 I have used sentence completion for several months now in a simple [Evernote](https://evernote.com/) page or journaled in my notebook. I found, however, that there was no good platform to do sentence completion: in Evernote (or any text file for that matter) I found it difficult to manage each day and week of sentence completion and I could not hide my previous sentences. My written journal was too reptetive and took up too much paper and space. Overall, it was difficult to track, manage, and took too much space.
