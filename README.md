@@ -5,7 +5,7 @@ Sentpletion is a desktop application for Windows, Mac, and Linux operating syste
 Each week you have the same 5-6 sentence stems. In under 10 minutes you must add 6-10 completions for each stem. Then you file these sentences away because you are not supposed to read any sentences from that week. Only at the end of each week can you pull up the sentences and re-read them in reflection for personal growth.
 
 | Stem | Completion |
-| -- | -- |
+| --- | --- |
 | *If I listen more to what people tell me today...* | I will understand that others want to help me grow. |
 
 ## The Problem
