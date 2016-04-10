@@ -1,0 +1,19 @@
+{
+  "name": "sentpletion",
+  "version": "0.1.0",
+  "description": "Sentence Completion Desktop App",
+  "main": "./main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rblades/Sentpletion-App.git"
+  },
+  "keywords": [
+    "pyschology"
+  ],
+  "author": "Rob Blades",
+  "license": "MIT",
+  "homepage": "https://github.com/rblades/Sentpletion-App"
+}
