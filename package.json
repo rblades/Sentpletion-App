@@ -15,5 +15,8 @@
   ],
   "author": "Rob Blades",
   "license": "MIT",
-  "homepage": "https://github.com/rblades/Sentpletion-App"
+  "homepage": "https://github.com/rblades/Sentpletion-App",
+  "devDependencies": {
+    "electron-prebuilt": "^0.37.5"
+  }
 }
