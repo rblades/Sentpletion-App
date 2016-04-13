@@ -18,5 +18,8 @@
   "homepage": "https://github.com/rblades/Sentpletion-App",
   "devDependencies": {
     "electron-prebuilt": "^0.37.5"
+  },
+  "dependencies": {
+    "nconf": "^0.8.4"
   }
 }
