@@ -12,12 +12,15 @@ var Tray = remote.require('tray');
 var Menu = remote.require('menu');
 var path = require('path');
 var trayIcon = null;
+
 if (process.platform === 'darwin') {
     trayIcon = new Tray(path.join(__dirname, 'img/mac_tray.png'));
 }
+
 else {
-    trayIcon = new Tray(path.join(__dirname, 'img/mac_tray_alt.png'));
+    trayIcon = new Tray(path.join(__dirname, 'img/tray_alt.png'));
 }
+
 var trayMenuTemplate = [
     {
         label: 'Sentpletion',
@@ -36,5 +39,6 @@ var trayMenuTemplate = [
         }
     }
 ];
+
 var trayMenu = Menu.buildFromTemplate(trayMenuTemplate);
 trayIcon.setContextMenu(trayMenu);
