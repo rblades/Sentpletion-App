@@ -21,5 +21,11 @@ function dateNotify(input, button) {
 }
 
 function twoNotify(input) {
+  if (input.on) {
+
+  }
   
+  if (input.off){
+    
+  }
 }

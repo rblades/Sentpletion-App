@@ -18,16 +18,16 @@
             <h4>Set amount of sentence stems</h4>
                 <input type="text" onchange="stemAmount(this);" />
             <h4>Toggle 2 minute warnings after full 10 minutes of work</h4>
-                <input id="toggle-one" checked type="checkbox">
+                <input id="toggle-event" data-toggle="toggle" type="checkbox">
     </div>
 </div>
 
 <script src="./js/settings.js"></script>
 <script src="./js/bootstrap-toggle.min.js"></script>
 <script>
-  $(function() {
-    $('#toggle-one').bootstrapToggle();
-  })
+$(function() {
+    $('#toggle-event').bootstrapToggle();
+})
 </script>
 </body>
 </html>
