@@ -28,3 +28,6 @@ To keep you on track, I implement the following:
 
 ### Security
 Sentence completion inevitably involves writing personal issues or information that you never want the world to see. You may not feel comfortable logging your personal feelings and struggles away in a server database. **Worry not!** The solution: all sentences are stored locally in your computer. Nothing you write is stored in a server. You can also choose to clear your sentences at any time. Sentpletion **is not** a web application and there are no usernames/passwords - the information you put into it is entirely local to your computer.
+
+## License
+Sentpletion is licensed under the MIT License. See the LICENSE file or [here](https://opensource.org/licenses/MIT) for more details.
