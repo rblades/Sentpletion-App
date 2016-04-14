@@ -14,20 +14,20 @@ closeEl.addEventListener('click', function (e) {
 });
 
 function stemAmount(input) {
-    if (input.value < 2) input.value = 2;
-    if (input.value > 10) input.value = 10;
+  if (input.value < 2) input.value = 2;
+  if (input.value > 10) input.value = 10;
 }
 
-function dateNotify(input, button) {
-
+function timeNotify(input, button) {
+  input
 }
 
 function twoNotify(input) {
-  if (input.on) {
+  if (input.bootstrapToggle(on)) {
 
   }
   
-  if (input.off){
+  if (input.bootstrapToggle(off)){
 
   }
 }
@@ -35,9 +35,9 @@ function twoNotify(input) {
 notifier.notify({
   title: 'Reminder!',
   message: 'Time to do your daily sentence completion exercises',
-  icon: path.join(__dirname, 'coulson.jpg'), // Absolute path (doesn't work on balloons)
+  icon: path.join(__dirname, 'tray.png'), // Absolute path (doesn't work on balloons)
   sound: true, // Only Notification Center or Windows Toasters
-  wait: true // Wait with callback, until user action is taken against notification
+  wait: false // Wait with callback, until user action is taken against notification
 }, function (err, response) {
   // Response is response from notification
 });
