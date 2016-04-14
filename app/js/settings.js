@@ -2,10 +2,10 @@
 
 'use strict';
 
-var ipc = require('ipc');
-var configuration = require('../configuration');
+const ipcMain = electron.ipcMain;
+const configuration = require('../configuration');
 
-var closeEl = document.querySelector('.close');
+let closeEl = document.querySelector('.close');
 
 closeEl.addEventListener('click', function (e) {
     ipc.send('settings-window-closed');

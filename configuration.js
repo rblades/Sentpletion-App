@@ -1,5 +1,6 @@
 'use strict';
-var nconf = require('nconf').file({file: getUserHome() + '/sentpletion-config.json'});
+
+const nconf = require('nconf').file({file: getUserHome() + '/sentpletion-config.json'});
 
 function saveSettings(settingKey, settingValue) {
     nconf.set(settingKey, settingValue);

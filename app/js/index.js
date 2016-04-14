@@ -1,17 +1,17 @@
 // Javascript for index.html
 
-var db = new PouchDB('mydb-idb');
+let db = new PouchDB('mydb-idb');
 
-var settingsEl = document.querySelector('.settings');
+let settingsEl = document.querySelector('.settings');
 settingsEl.addEventListener('click', function () {
     ipc.send('settings-window-open');
 });
 
-var remote = require('remote');
-var Tray = remote.require('tray');
-var Menu = remote.require('menu');
-var path = require('path');
-var trayIcon = null;
+let remote = require('remote');
+let Tray = remote.require('tray');
+let Menu = remote.require('menu');
+let path = require('path');
+let trayIcon = null;
 
 if (process.platform === 'darwin') {
     trayIcon = new Tray(path.join(__dirname, 'img/mac_tray.png'));
@@ -21,7 +21,7 @@ else {
     trayIcon = new Tray(path.join(__dirname, 'img/tray_alt.png'));
 }
 
-var trayMenuTemplate = [
+let trayMenuTemplate = [
     {
         label: 'Sentpletion',
         enabled: false
@@ -40,5 +40,5 @@ var trayMenuTemplate = [
     }
 ];
 
-var trayMenu = Menu.buildFromTemplate(trayMenuTemplate);
+let trayMenu = Menu.buildFromTemplate(trayMenuTemplate);
 trayIcon.setContextMenu(trayMenu);
