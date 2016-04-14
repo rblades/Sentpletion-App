@@ -19,3 +19,7 @@ function stemAmount(input) {
 function dateNotify(input, button) {
 
 }
+
+function fiveNotify(button, toggle) {
+  
+}

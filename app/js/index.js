@@ -14,11 +14,11 @@ let path = require('path');
 let trayIcon = null;
 
 if (process.platform === 'darwin') {
-    trayIcon = new Tray(path.join(__dirname, 'img/mac_tray.png'));
+    trayIcon = new Tray(path.join(__dirname, 'img/icon.png'));
 }
 
 else {
-    trayIcon = new Tray(path.join(__dirname, 'img/tray_alt.png'));
+    trayIcon = new Tray(path.join(__dirname, 'img/icon.png'));
 }
 
 let trayMenuTemplate = [
