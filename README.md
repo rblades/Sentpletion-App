@@ -22,7 +22,7 @@ The entire point of sentence completion is to restrict yourself a bit so that yo
 To keep you on track, I implement the following:
 
 - Each week is counted by 7 days of full sentence completion. Therefore, if you miss several days in a week, you must complete the full 7 days of exercises before moving onto the next week of exercises.
-- The app will notify you if you have not completed your daily exercises after 10 minutes. It will then notify you every consecutive 5 minutes. (This feature can be switched off)
+- The app will notify you if you have not completed your daily exercises after 10 minutes. It will then notify you every consecutive 2 minutes. (This feature can be switched off)
 - You cannot set less than 2 or more than 10 sentences to complete for each stem
 - You can set the app to notify you at a specific time each day to complete your exercises
 

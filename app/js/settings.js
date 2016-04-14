@@ -20,6 +20,6 @@ function dateNotify(input, button) {
 
 }
 
-function fiveNotify(button, toggle) {
+function twoNotify(input) {
   
 }
