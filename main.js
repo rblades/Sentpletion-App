@@ -3,8 +3,7 @@
 const electron = require('electron');
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
-const ipcMain = electron.ipcMain;
-const Menu = require('Menu');
+const ipcMain = require('electron').ipcMain;
 
 const configuration = require('./configuration');
 
@@ -34,30 +33,9 @@ app.on('ready', function() {
     mainWindow = null;
   });
 
-  var template = [{
-    label: "Sentpletion",
-    submenu: [
-        { label: "Sentpletion", selector: "orderFrontStandardAboutPanel:" },
-        { type: "separator" },
-        { label: "Quit", accelerator: "Command+Q", click: function() { app.quit(); }}
-    ]}, {
-    label: "Edit",
-    submenu: [
-        { label: "Undo", accelerator: "CmdOrCtrl+Z", selector: "undo:" },
-        { label: "Redo", accelerator: "CmdOrCtrl+Y", selector: "redo:" },
-        { type: "separator" },
-        { label: "Cut", accelerator: "CmdOrCtrl+X", selector: "cut:" },
-        { label: "Copy", accelerator: "CmdOrCtrl+C", selector: "copy:" },
-        { label: "Paste", accelerator: "CmdOrCtrl+V", selector: "paste:" },
-        { label: "Select All", accelerator: "CmdOrCtrl+A", selector: "selectAll:" }
-    ]}
-  ];
-
-  Menu.setApplicationMenu(Menu.buildFromTemplate(template));
-
 });
 
-ipc.on('settings-window-open', function () {
+ipcMain.on('settings-window-open', function () {
     if (settingsWindow) {
         return;
     }
@@ -68,7 +46,7 @@ ipc.on('settings-window-open', function () {
     });
 });
 
-ipc.on('settings-window-closed', function () {
+ipcMain.on('settings-window-closed', function () {
     if (settingsWindow) {
         settingsWindow.close();
     }

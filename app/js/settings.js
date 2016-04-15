@@ -2,15 +2,13 @@
 
 'use strict';
 
-const ipcMain = electron.ipcMain;
-const configuration = require('../configuration');
-const notifier = require('../node-notifier');
-const path = require('path');
+const configuration = require('./configuration');
+const notifier = require('node-notifier');
 
 let closeEl = document.querySelector('.close');
 
 closeEl.addEventListener('click', function (e) {
-    ipc.send('settings-window-closed');
+    ipcRenderer.send('settings-window-closed');
 });
 
 function stemAmount(input) {

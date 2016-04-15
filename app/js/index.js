@@ -1,24 +1,31 @@
 // Javascript for index.html
 
+const electron = require('electron');
+const app = electron.app;
+const BrowserWindow = electron.BrowserWindow;
+
+const ipcMain = electron.ipcMain;
+const ipcRenderer = electron.ipcRenderer
+const remote = require('remote');
+const Tray = remote.require('tray');
+const Menu = remote.require('menu');
+const path = require('path');
+
+let trayIcon = null;
+
 let db = new PouchDB('mydb-idb');
 
 let settingsEl = document.querySelector('.settings');
 settingsEl.addEventListener('click', function () {
-    ipc.send('settings-window-open');
+    ipcMain.send('settings-window-open');
 });
-
-let remote = require('remote');
-let Tray = remote.require('tray');
-let Menu = remote.require('menu');
-let path = require('path');
-let trayIcon = null;
 
 if (process.platform === 'darwin') {
     trayIcon = new Tray(path.join(__dirname, 'img/icon.png'));
 }
 
 else {
-    trayIcon = new Tray(path.join(__dirname, 'img/icon.png'));
+    trayIcon = new Tray(path.join(__dirname, 'img/icon-alt.png'));
 }
 
 let trayMenuTemplate = [
@@ -29,13 +36,13 @@ let trayMenuTemplate = [
     {
         label: 'Settings',
         click: function () {
-            ipc.send('settings-window-open');
+            ipcMain.send('settings-window-open');
         }
     },
     {
         label: 'Quit',
         click: function () {
-            ipc.send('settings-window-closed');
+            ipcMain.send('settings-window-closed');
         }
     }
 ];
