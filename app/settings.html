@@ -6,31 +6,26 @@
 
     <title>Sentpletion Settings</title>
 
-    <link href="app/css/settings.css" rel="stylesheet" type="text/css"/>
-    <link href="app/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-    <link href="app/css/bootstrap-toggle.min.css" rel="stylesheet" type="text/css">
+    <link href="css/settings.css" rel="stylesheet" type="text/css"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="css/bootstrap-toggle.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
 <div class="close">Close</div>
     <div class="wrapper">
-        <h1>Settings</h1>
-            <h4>Set amount of sentence stems</h4>
-                <input type="text" onchange="stemAmount(this);" />
-            <h4>Set notification time</h4>
-                <label><input type="checkbox" value="">In 5 minutes</label>
-                <label><input type="checkbox" value="">In 30 minutes</label>
-                <label><input type="checkbox" value="">In 1 hour</label>
-                <label><input type="checkbox" value="">In 2 hours</label>
-                <label><input type="checkbox" value="">In 5 hours</label>
-
-            <h4>Toggle 2 minute warnings after full 10 minutes of work</h4>
-                <input id="toggle-event" data-toggle="toggle" type="checkbox">
+        <h1>Preferences</h1>
+            <p class="lead">I want to write <input type="text" value="6" onchange="stemAmount(this);" /> sentence stems today.</p>
+            <p class="lead">I want to be notified <input type="text" value="5" onchange="timeNotify(this);" /> minutes from now.</p>
+            <p class="lead">Toggle 2 minute warnings after full 10 minutes of work <input id="toggle-event" data-toggle="toggle" type="checkbox"></p>
     </div>
+            <button type="button" class="btn btn-default">Confirm Preferences</button>
 </div>
 
-<script src="./js/settings.js"></script>
-<script src="./js/bootstrap-toggle.min.js"></script>
+<script>window.$ = window.jQuery = require('./app/js/jquery.min.js');</script>
+
+<script src="js/settings.js"></script>
+<script src="js/bootstrap-toggle.min.js"></script>
 <script>
 $(function() {
     $('#toggle-event').bootstrapToggle();

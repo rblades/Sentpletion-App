@@ -17,6 +17,7 @@
   "license": "MIT",
   "homepage": "https://github.com/rblades/Sentpletion-App",
   "devDependencies": {
+    "devtron": "^1.1.0",
     "electron-prebuilt": "^0.37.5"
   },
   "dependencies": {
