@@ -16,6 +16,18 @@ function stemAmount(input) {
   if (input.value > 10) input.value = 10;
 }
 
+document.getElementById("stem").onblur=checkMandator;
+
+function checkMandatory() {
+  if ((this.value.length < 2) && (this.value.length > 10)) {
+     this.parentNode.setAttribute("style",
+"background-color: #ffcccc");
+     this.setAttribute("aria-invalid", "true");
+     generateAlert("Please set between 2 to 10 stems to get the full effect of sentence completion exercises.");
+  }
+}
+
+
 function timeNotify(input, button) {
   input
 }
