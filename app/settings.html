@@ -6,9 +6,9 @@
 
     <title>Sentpletion Settings</title>
 
-    <link href="css/settings.css" rel="stylesheet" type="text/css"/>
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-    <link href="css/bootstrap-toggle.min.css" rel="stylesheet" type="text/css">
+    <link href="./css/settings.css" rel="stylesheet" type="text/css"/>
+    <link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="./css/bootstrap-toggle.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
@@ -22,10 +22,12 @@
             <button type="button" class="btn btn-default">Confirm Preferences</button>
 </div>
 
-<script>window.$ = window.jQuery = require('./app/js/jquery.min.js');</script>
+<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
 
-<script src="js/settings.js"></script>
-<script src="js/bootstrap-toggle.min.js"></script>
+<script src="./js/jquery.min.js"</script>
+
+<script src="./js/settings.js"></script>
+<script src="./js/bootstrap-toggle.min.js"></script>
 <script>
 $(function() {
     $('#toggle-event').bootstrapToggle();

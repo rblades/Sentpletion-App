@@ -40,7 +40,7 @@ let trayMenuTemplate = [
         }
     },
     {
-        label: 'Quit',
+        label: 'Close',
         click: function () {
             ipcMain.send('settings-window-closed');
         }

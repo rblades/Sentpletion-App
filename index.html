@@ -19,11 +19,13 @@
 
 
 <!-- Include jQuery so it functions properly in Electron -->
-<script>window.$ = window.jQuery = require('./app/js/jquery.min.js');</script>
+<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
 
-<script src="app/js/index.js"></script>
-<script src="app/js/settings.js"></script>
-<script src="app/js/bootstrap.min.js"></script>
-<script src="app/js/pouchdb-5.3.1.min.js"></script>
+<script src="./app/js/jquery.min.js"</script>
+
+<script src="./app/js/index.js"></script>
+<script src="./app/js/settings.js"></script>
+<script src="./app/js/bootstrap.min.js"></script>
+<script src="./app/js/pouchdb-5.3.1.min.js"></script>
 </body>
 </html>
