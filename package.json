@@ -2,7 +2,7 @@
   "name": "sentpletion",
   "version": "0.1.0",
   "description": "Sentence Completion Desktop App",
-  "main": "./main.js",
+  "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
@@ -18,7 +18,7 @@
   "homepage": "https://github.com/rblades/Sentpletion-App",
   "devDependencies": {
     "devtron": "^1.1.0",
-    "electron-prebuilt": "^0.37.5"
+    "electron-prebuilt": "1.2.8"
   },
   "dependencies": {
     "nconf": "^0.8.4",

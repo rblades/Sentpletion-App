@@ -1,15 +1,12 @@
-'use strict';
-
 const electron = require('electron');
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
-const ipcMain = require('electron').ipcMain;
+const ipcMain = electron.ipcMain;
 
-const configuration = require('./configuration');
+// const configuration = require('./configuration');
 
 let mainWindow = null;
 let settingsWindow = null;
-
 
 app.on('window-all-closed', function() {
   if (process.platform != 'darwin') {
@@ -18,9 +15,9 @@ app.on('window-all-closed', function() {
 });
 
 app.on('ready', function() {
-  if (!configuration.readSettings('stemAmount')) {
-      configuration.saveSettings('stemAmount', ['']);
-  }
+  // if (!configuration.readSettings('stemAmount')) {
+  //     configuration.saveSettings('stemAmount', ['']);
+  // }
 
   mainWindow = new BrowserWindow({width: 800, height: 600});
 
@@ -39,8 +36,8 @@ ipcMain.on('settings-window-open', function () {
     if (settingsWindow) {
         return;
     }
-    settingsWindow = new BrowserWindow({width: 400, height: 300});
-    settingsWindow.loadUrl('file://' + __dirname + '/app/settings.html');
+    settingsWindow = new BrowserWindow({width: 600, height: 350});
+    settingsWindow.loadURL('file://' + __dirname + '/app/settings.html');
     settingsWindow.on('closed', function () {
         settingsWindow = null;
     });

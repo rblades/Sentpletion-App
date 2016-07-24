@@ -1,65 +1,75 @@
 // Javascript for settings.html
 
-'use strict';
+// const configuration = require('./configuration');
+// const notifier = require('node-notifier');
+const electron = require('electron');
+const app = electron.app;
+const BrowserWindow = electron.BrowserWindow;
 
-const configuration = require('./configuration');
-const notifier = require('node-notifier');
+const ipcMain = electron.ipcMain;
+const ipcRenderer = electron.ipcRenderer;
 
 let closeEl = document.querySelector('.close');
 
-if(closeEl) {
-  closeEl.addEventListener('click', function (e) {
-    ipcRenderer.send('settings-window-closed');
+closeEl.addEventListener('click', function (e) {
+  ipcRenderer.send('settings-window-closed');
 });
-}
 
-/* add button class confirming preferences send to local storage
+$('#close-settings').click(function () {
+    let confirm = $( '#confirm' );
+    if ( confirm.data('clicked',false)) {
+        alert('Please confirm your preferences below');
+        return false;
+    }
+});
 
-function stemAmount(input) {
-  if (input.value < 2) input.value = 2;
-  if (input.value > 10) input.value = 10;
-}
+//  add button class confirming preferences send to local storage
 
-// document.getElementById("stem").onblur=checkMandator;
+// function stemAmount(input) {
+//   if (input.value < 2) input.value = 2;
+//   if (input.value > 10) input.value = 10;
+// }
 
-function checkMandatory() {
-  if ((this.value.length < 2) && (this.value.length > 10)) {
-     this.parentNode.setAttribute("style",
-"background-color: #ffcccc");
-     this.setAttribute("aria-invalid", "true");
-     generateAlert("Please set between 2 to 10 stems to get the full effect of sentence completion exercises.");
-  }
-}
+// // document.getElementById("stem").onblur=checkMandator;
+
+// function checkMandatory() {
+//   if ((this.value.length < 2) && (this.value.length > 10)) {
+//      this.parentNode.setAttribute("style",
+// "background-color: #ffcccc");
+//      this.setAttribute("aria-invalid", "true");
+//      generateAlert("Please set between 2 to 10 stems to get the full effect of sentence completion exercises.");
+//   }
+// }
 
 
-function timeNotify(input, button) {
-  input
-}
+// function timeNotify(input, button) {
+//   input
+// }
 
-function twoNotify(input) {
-  if (input.bootstrapToggle(on)) {
+// function twoNotify(input) {
+//   if (input.bootstrapToggle(on)) {
 
-  }
+//   }
   
-  if (input.bootstrapToggle(off)){
+//   if (input.bootstrapToggle(off)){
 
-  }
-}
+//   }
+// }
 
-notifier.notify({
-  title: 'Reminder!',
-  message: 'Time to do your daily sentence completion exercises',
-  icon: path.join(__dirname, 'tray.png'), // Absolute path (doesn't work on balloons)
-  sound: true, // Only Notification Center or Windows Toasters
-  wait: false // Wait with callback, until user action is taken against notification
-}, function (err, response) {
-  // Response is response from notification
-});
+// notifier.notify({
+//   title: 'Reminder!',
+//   message: 'Time to do your daily sentence completion exercises',
+//   icon: path.join(__dirname, 'tray.png'), // Absolute path (doesn't work on balloons)
+//   sound: true, // Only Notification Center or Windows Toasters
+//   wait: false // Wait with callback, until user action is taken against notification
+// }, function (err, response) {
+//   // Response is response from notification
+// });
 
-notifier.on('click', function (notifierObject, options) {
-  // Triggers if `wait: true` and user clicks notification
-});
+// notifier.on('click', function (notifierObject, options) {
+//   // Triggers if `wait: true` and user clicks notification
+// });
 
-notifier.on('timeout', function (notifierObject, options) {
-  // Triggers if `wait: true` and notification closes
-});*/
+// notifier.on('timeout', function (notifierObject, options) {
+//   // Triggers if `wait: true` and notification closes
+// });
